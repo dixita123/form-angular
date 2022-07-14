@@ -1,0 +1,50 @@
+<div class="container">
+     
+    <div *ngFor="let m of u">
+        <div *ngIf="m.id==itemEdit.id">
+            <form  (ngSubmit)="onSubmit(m)" >
+                <h1>Update Form</h1>
+                <div>
+                  <label for="firstname">First Name </label>
+                  <input type="text" id="firstname" name="firstname" [(ngModel)]="m.firstname">
+                </div>
+               
+                <div>
+                  <label for="lastname">Last Name </label>
+                  <input type="text" id="lastname" name="lastname" [(ngModel)]="m.lastname">
+                </div>
+               
+                <div>
+                  <label for="email">Email </label>
+                  <input type="text" id="email" name="email" [(ngModel)]="m.email">
+                </div>
+                <div>
+                  <label for="email">Phone </label>
+                  <input type="text" id="phone" name="phone" [(ngModel)]="m.phone">
+                </div>
+                <div>
+                  <label for="email">Mobile Number </label>
+                  <input type="text" id="email" name="mobile" [(ngModel)]="m.mobile">
+                </div>
+                
+               
+                <div>
+                  <label for="country">Country </label>
+                  <select class="form-control" name="country" id="country" [(ngModel)]="m.country">
+                      <option value="" disabled selected   style="color: white;">{{m.country}}</option>
+                      <option *ngFor="let c of countries" >{{c.name}}</option>
+                 </select>
+                </div>
+                <div>
+                    <label for="email">DOB </label>
+                    <input type="date" id="dob" name="dob" [(ngModel)]="m.dob" >
+                  </div>
+               
+                <div>
+                  <button type="submit" class="submit">Update</button>
+                </div>
+               
+              </form>
+        </div>
+    </div>
+</div>

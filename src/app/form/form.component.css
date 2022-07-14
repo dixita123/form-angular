@@ -1,0 +1,38 @@
+h1{
+    text-align: center;
+
+}
+form{
+    width: 80%;
+    margin-left: 8%;
+}
+form div{
+    width: 100%;
+    margin: 20px;
+}
+input {
+    border-radius: 10px;
+    width: 100%;
+    padding: 10px;
+    box-shadow: 10px 10px 8px #888888 0.9;
+  }
+  div label{
+    font-size: 20px;
+    margin: 8px;
+
+  }
+  div select{
+    background-color: black;
+    color: white;
+    border-radius:10px ;
+    outline: none;
+    padding: 10px;
+  }
+  .submit{
+    background-color: blue;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 10px;
+    width: 100px;
+  }

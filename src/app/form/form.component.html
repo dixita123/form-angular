@@ -1,0 +1,46 @@
+<div class="container">
+     
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()" >
+    <h1>User Form</h1>
+    <div>
+      <label for="firstname">First Name </label>
+      <input type="text" id="firstname" name="firstname" formControlName="firstname">
+    </div>
+   
+    <div>
+      <label for="lastname">Last Name </label>
+      <input type="text" id="lastname" name="lastname" formControlName="lastname">
+    </div>
+   
+    <div>
+      <label for="email">Email </label>
+      <input type="text" id="email" name="email" formControlName="email">
+    </div>
+    <div>
+      <label for="email">Phone </label>
+      <input type="text" id="phone" name="phone" formControlName="phone">
+    </div>
+    <div>
+      <label for="email">Mobile Number </label>
+      <input type="text" id="email" name="mobile" formControlName="mobile">
+    </div>
+    
+   
+    <div>
+      <label for="country">Country </label>
+      <select class="form-control" name="country" id="country" formControlName="country">
+          <option value="" disabled selected>Select Country</option>
+          <option *ngFor="let country of countries" [value]="country.name" >{{country.name}}</option>
+     </select>
+    </div>
+    <div>
+        <label for="email">DOB </label>
+        <input type="date" id="dob" name="dob" formControlName="dob">
+      </div>
+   
+    <div>
+      <button type="submit" class="submit">Submit</button>
+    </div>
+   
+  </form>
+</div>
